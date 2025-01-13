@@ -6,8 +6,8 @@ require('dotenv').config();
 const database = process.env.DB_DATABASE;
 const username = process.env.DB_USERNAME;
 const password = process.env.DB_PASSWORD;
-const host = '127.0.0.1';  // or your database host
-const port = 3306;         // or your database port
+const host = process.env.DB_HOST;  // or your database host
+const port = process.env.DB_PORT;         // or your database port
 
 const sequelize = new Sequelize(database, username, password, {
   host: host,
